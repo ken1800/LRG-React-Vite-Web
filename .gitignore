@@ -25,3 +25,4 @@ dist-ssr
 # omit .env
 .env
 .firebaserc
+.firebase

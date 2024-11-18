@@ -32,7 +32,7 @@ const HotelsList = () => {
     setSelectedHotel(null);
   };
 
-  if (loading) return <LoadingSpinner />;
+  if(loading) return <LoadingSpinner />;
   if (error) {
     return (
       <div className="container mx-auto px-4 py-8">
