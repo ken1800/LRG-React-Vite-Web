@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 # omit .env
 .env
+.firebaserc

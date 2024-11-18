@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **LRG-web-project** project! This README will guide you through the installation, setup, and usage of the project.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+Ensure you have the following installed on your machine:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Node.js** (v16 or higher)  
+   [Download Node.js](https://nodejs.org/)  
+2. **npm** (comes with Node.js) or **yarn**  
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd <project-folder>
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Replace `<repository-url>` with your Git repository URL and `<project-folder>` with the name of the folder where the project will reside.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Install Dependencies
+
+Run the following command to install the project dependencies:  
+
+```bash
+npm install
 ```
+
+Alternatively, if you're using `yarn`:
+
+```bash
+yarn install
+```
+
+---
+
+### 3. Set Up Environment Variables
+
+Create a `.env` file in the root of the project and define the following variables:
+
+```plaintext
+APP_ID=<your-app-id>
+BASE_URL=<your-base-url>
+```
+
+- `APP_ID`: Replace `<your-app-id>` with the application ID you want to use.  
+- `BASE_URL`: Replace `<your-base-url>` with the base URL for your API or backend service.  
+
+### Example `.env` file:
+
+```plaintext
+APP_ID=123456
+BASE_URL=https://api.example.com
+```
+
+---
+
+### 4. Start the Development Server
+
+Run the following command to start the development server:
+
+```bash
+npm run dev
+```
+
+Or, if you're using `yarn`:
+
+```bash
+yarn dev
+```
+
+The development server will be available at:  
+[http://localhost:5173](http://localhost:5173)
